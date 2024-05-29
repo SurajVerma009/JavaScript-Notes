@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Remover</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul id="images">
+            <li><img src="https://media.istockphoto.com/id/1458688420/photo/happy-smiling-young-farmer-busy-using-mobile-phone-at-greenhouse-concept-of-technology-modern.jpg?s=1024x1024&w=is&k=20&c=uvgN66wjLLEwbPpz0SKNai9UEgKWyT6kJAXWu8fnMzo="
+                    alt="Beautiful Image" id="one"></li>
+            <li><img src="https://media.istockphoto.com/id/1049317672/photo/indian-girl-with-phone.jpg?s=1024x1024&w=is&k=20&c=rjwNFkzn-btrqGxokcFFnXvW6lS6LTRBgUN2RLGxDfw="
+                    alt="Beautiful Image" id="two"></li>
+            <li><img src="https://images.pexels.com/photos/19467713/pexels-photo-19467713/free-photo-of-portrait-of-woman-in-coat-and-scarf.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Beautiful Image" id="three"></li>
+            <li><a href="https://www.google.com/" id="google">Google.com</a></li>
+        </ul>
+    </main>
+</body>
+<script>
+    document.querySelector("#images").addEventListener("click", (e) => {
+        //     console.log(e);           // => PointerEvent
+        //     console.log(e.target);    // => img
+        //    let removeIt = e.target.parentNode  // => li
+        //    removeIt.remove()
+
+        // Note -> Problem ye h ki jb hm img pe click kr rhe to li to pura delete ho ja rha h but jb hm li ke bulletPoint pe click kr rhe h to pura ul remove ho ja rha h 
+
+        if (e.target.tagName === "IMG") {
+            let removeIt = e.target.parentNode  
+            removeIt.remove()
+        }
+    })
+
+    document.getElementById("google").addEventListener("click", (e) => {
+        e.preventDefault()
+        console.log("Google Clicked");
+    }, false)
+</script>
+
+</html>

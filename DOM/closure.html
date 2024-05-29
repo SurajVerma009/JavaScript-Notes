@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures | Chai aur Code</title>
+
+    <style>
+        body {
+            background-color: #212121;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="blue">Blue</button>
+</body>
+
+<script>
+    // First Way
+
+    // document.getElementById("orange").onclick = function () {
+    //     document.body.style.backgroundColor = "Orange"
+    // }
+
+    // document.getElementById("blue").onclick = function () {
+    //     document.body.style.backgroundColor = "Blue"
+    // }
+
+    // But if a 100 button then it is terriable to repeat and repeat or copy pesting
+
+    // Second Way
+
+    function handleClick(color) {
+        return function () {
+            document.body.style.backgroundColor = color
+        }
+
+    }
+
+    document.getElementById("orange").onclick = handleClick("orange")
+
+    document.getElementById("blue").onclick = handleClick("blue")
+</script>
+
+</html>

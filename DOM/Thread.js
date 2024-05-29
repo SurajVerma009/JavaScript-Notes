@@ -1,0 +1,3 @@
+/*
+Single thread aur multiple thread dono programming mein important concepts hain. Ek thread ek execution path ko represent karta hai. Jab ek program ke andar sirf ek thread hota hai, toh woh single threaded hota hai, matlab ek hi execution path hoti hai. Lekin jab ek program mein multiple threads hote hain, tab ek se zyada execution paths hote hain, jinmein har ek thread alag-alag tasks ko simultaneously execute kar sakta hai. Isse program ki efficiency badhti hai aur multitasking ka support milta hai. Multiple threads ka use commonly parallel processing, asynchronous programming, aur concurrency ke liye kiya jata hai.
+*/

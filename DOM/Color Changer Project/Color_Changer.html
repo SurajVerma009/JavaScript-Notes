@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            background-color: #212121;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #red {
+            background-color: #ff0000;
+        }
+
+        #green {
+            background-color: #008000;
+        }
+
+        #yellow {
+            background-color: #ffff00;
+        }
+
+        #blue {
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>--Click On Button--</h1>
+        <div class="buttonContainer">
+            <div class="button" id="red"></div>
+            <div class="button" id="green"></div>
+            <div class="button" id="yellow"></div>
+            <div class="button" id="blue"></div>
+        </div>
+    </main>
+</body>
+
+<script>
+    let parent = document.querySelector("body")
+
+    let button = document.querySelectorAll(".button")
+
+    button.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            if (e.target.id === "red") {
+                parent.style.backgroundColor = e.target.id
+            } else if (e.target.id === "green") {
+                parent.style.backgroundColor = e.target.id
+            } else if (e.target.id === "yellow") {
+                parent.style.backgroundColor = e.target.id
+            }
+            else {
+                parent.style.backgroundColor = e.target.id
+            }
+        });
+    });
+
+
+    //    This demonstrates that e contains information about the event itself, while e.target refers to the specific element that was clicked, allowing you to access its properties and attributes.
+</script>
+
+</html>

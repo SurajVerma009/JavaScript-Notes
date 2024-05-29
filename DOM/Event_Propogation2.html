@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Learning | Chai aur Code</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul id="images">
+            <li><img src="https://media.istockphoto.com/id/1458688420/photo/happy-smiling-young-farmer-busy-using-mobile-phone-at-greenhouse-concept-of-technology-modern.jpg?s=1024x1024&w=is&k=20&c=uvgN66wjLLEwbPpz0SKNai9UEgKWyT6kJAXWu8fnMzo="
+                    alt="Beautiful Image" id="one"></li>
+            <li><img src="https://media.istockphoto.com/id/1049317672/photo/indian-girl-with-phone.jpg?s=1024x1024&w=is&k=20&c=rjwNFkzn-btrqGxokcFFnXvW6lS6LTRBgUN2RLGxDfw="
+                    alt="Beautiful Image" id="two"></li>
+            <li><img src="https://images.pexels.com/photos/19467713/pexels-photo-19467713/free-photo-of-portrait-of-woman-in-coat-and-scarf.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Beautiful Image" id="three"></li>
+            <li><a href="https://www.google.com/" id="google">Google.com</a></li>
+        </ul>
+    </main>
+</body>
+<script>
+    document.getElementById("images").addEventListener("click", function (e) {
+        // console.log(e.target);
+        // console.log(e.target.id);
+        console.log("Ul Clicked");
+    }, false)
+
+    document.getElementById("three").addEventListener("click", (e) => {
+        console.log("Li Clicked");
+        e.stopPropagation()
+    }, false)
+
+    document.getElementById("google").addEventListener("click", (e) => {
+        e.preventDefault()
+        console.log("Google Clicked");
+        e.stopPropagation()
+    }, false)
+</script>
+
+</html>

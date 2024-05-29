@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning | Chai aur Code</title>
+</head>
+
+<body>
+    <ul>
+        <li>Home</li>
+    </ul>
+</body>
+
+<script>
+
+    // ==>  First Way
+
+    // let newElement = document.createElement("div")
+
+    // console.log(newElement);
+
+    // newElement.className = "myDiv"
+
+    // newElement.id = Math.round(Math.random() * 10 + 1)
+
+    // newElement.setAttribute("title","DivSection")
+
+    /*  newElement.setAttribute({
+    "title": "DivSection",
+    "class": "myClass",
+    "data-id": "12345"
+       }); */  // ==> isase aap ik baar me multiple attribute set kr sakte h (Object Notation)
+
+    // --> There are two way to add text 
+
+    // First way
+
+    // newElement.innerText = "New Element"
+
+    // Second Way
+
+    // let addText = document.createTextNode("New Div")
+
+    // newElement.appendChild(addText)
+
+    // newElement.style.backgroundColor = "Gold"
+
+    // newElement.style.padding = "20px"
+
+    // document.body.appendChild(newElement)
+
+
+    // Second Way
+
+    //     function Element(...properties) {
+    //         let div = document.createElement("div");
+    //         div.style.backgroundColor = properties[0];
+    //         div.style.padding = properties[1];
+    //         div.innerText = properties[2];
+    //         div.style.className = properties[3];
+    //         div.style.id = properties[4];
+    //         return div;
+    //     }
+
+    //    let newDiv =  Element("Gold", "20px","New Element", "mydiv", 1);
+
+    //     document.body.appendChild(newDiv);
+
+
+
+    // ==> Third Way
+
+
+    function element(...parameter) {
+        let div = document.createElement("div")
+
+        for (let i = 0; i <= parameter.length; i++) {
+            div.style.backgroundColor = parameter[0];
+            div.style.padding = parameter[1];
+            div.innerText = parameter[2];
+            div.style.className = parameter[3];
+            div.style.id = parameter[4];
+
+        }
+        return div;
+
+    }
+
+    let newDiv = element("Orange", "20px", "New Element", "mydiv", 1);
+
+    document.body.appendChild(newDiv);
+
+    //  ----------------------------------------------
+
+    // How to add new li in ul
+
+    let anotherList = document.createElement("li")
+
+    console.log(anotherList);
+
+    let addText = document.createTextNode("About")
+
+    anotherList.appendChild(addText)
+
+    let parent = document.querySelector("ul")
+
+    parent.appendChild(anotherList)
+
+</script>
+
+</html>

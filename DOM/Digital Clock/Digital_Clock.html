@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #212121;
+             overflow: hidden;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .clockContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .clock {
+            width: 200px;
+            height: 50px;
+            background-color: orange;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2em;
+            box-sizing: border-box;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+    <main>
+        <div class="clockContainer">
+            <div class="clock"></div>
+        </div>
+    </main>
+</body>
+
+<script>
+    let digitalClock = document.querySelector(".clock")
+
+    setInterval(function () {
+        let date = new Date().toLocaleTimeString()
+        digitalClock.innerHTML = date;
+    },1000)
+</script>
+
+</html>

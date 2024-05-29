@@ -1,0 +1,4 @@
+/*
+Synchronous Programming: Synchronous programming mein, ek task complete hone tak program ke execution flow ko roka jata hai. Matlab, jab ek task shuru hota hai, toh program dusre task ke liye wait karta hai jab tak pehla task complete nahi ho jata. Ismein, tasks ek ke baad ek sequentially execute hote hain.
+Asynchronous Programming: Asynchronous programming mein, ek task shuru hone ke baad bhi program ka execution flow continue rehta hai aur dusre tasks ko simultaneously process kiya ja sakta hai. Jab ek task shuru hota hai, toh program dusre tasks ke processing ko block nahi karta. Ismein, multiple tasks simultaneously execute hote hain aur result ka wait na karte hue program continue chalta hai.
+*/

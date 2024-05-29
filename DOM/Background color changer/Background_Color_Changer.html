@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            background-color: #212121;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click On Button</h1>
+    <input type="button" value="Start" id="start">
+    <input type="button" value="Stop" id="stop">
+</body>
+<script>
+    let parent = document.querySelector("body")
+    let start = document.getElementById("start")
+    let stop = document.getElementById("stop")
+
+   let hex = "0123456789ABCDEF";
+   let interval;
+   
+   function randomColor() {
+       let color = "#"; 
+       for (let i = 0; i < 6; i++) {
+           color += hex[Math.floor(Math.random()*16)];
+       }
+       parent.style.backgroundColor = color; // Set background color
+   }
+
+   start.addEventListener("click", function(){
+       interval = setInterval(randomColor, 1000);
+   });
+
+   stop.addEventListener("click", function(){
+       clearInterval(interval);
+   });
+</script>
+
+</html>

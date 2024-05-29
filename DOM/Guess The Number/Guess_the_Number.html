@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #212121;
+            color: #ffffff;
+        }
+
+        .heading {
+            border-bottom: 2px solid #ffffff;
+            padding: 1em;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            margin-top: 2em;
+            gap: 1em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        input {
+            height: 30px;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="heading">
+            <h1>Number Guessing Game</h1>
+            <p>Try and guess a random number between 1 to 100. You have 10 attempts to guess the right number.</p>
+        </div>
+        <form>
+            <h2>Guess a Number</h2>
+            <input type="text" id="textInput">
+            <input type="submit" value="Submit Guess">
+            <p class="outcome"></p>
+            <p class="previousGuess"></p>
+            <p class="guessRemaining"></p>
+            <p class="gameOver"></p>
+            <p class="newGame"></p>
+        </form>
+    </main>
+</body>
+<script>
+    let form = document.querySelector("form");
+    let randomNumber = Math.round(Math.random() * 100 + 1);
+    let guessCount = 10;
+    let Outcome = document.querySelector(".outcome");
+    let preGuess = document.querySelector(".previousGuess");
+    let guessRemain = document.querySelector(".guessRemaining");
+    let gameEnd = document.querySelector(".gameOver");
+    let newGame = document.querySelector(".newGame");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let userInput = parseInt(document.getElementById("textInput").value);
+
+        if (userInput === randomNumber) {
+            Outcome.innerHTML = `You Guessed it Correct`;
+            gameEnd.innerHTML = `Congratulations! The number was ${randomNumber}`;
+            disableForm();
+        } else if (userInput > randomNumber) {
+            Outcome.innerHTML = `Your number ${userInput} is High.`;
+            preGuess.innerHTML = `Previous Guesses: ${userInput}`;
+        } else if (userInput < randomNumber) {
+            Outcome.innerHTML = `Your number ${userInput} is Low.`;
+            preGuess.innerHTML = `Previous Guesses: ${userInput}`;
+        }
+
+        guessCount--;
+        guessRemain.innerHTML = `Guesses Remaining: ${guessCount}`;
+
+        if (guessCount === 0) {
+            gameEnd.innerHTML = `Game Over! The number was ${randomNumber}`;
+            disableForm();
+        }
+    });
+
+    function disableForm() {
+        document.getElementById("textInput").disabled = true;
+        document.querySelector("input[type='submit']").disabled = true;
+        newGame.innerHTML = "Start New Game";
+    }
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning | Chai aur Code</title>
+</head>
+<body>
+    <ul>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Python</li>
+        <li>Ruby</li>
+    </ul>
+</body>
+<script>
+    // --> Edit
+
+    let firstLi = document.querySelector("li:first-child")
+
+    console.log(firstLi);
+
+    let newLi = document.createElement("li")
+
+    newLi.textContent = "HTML"
+    console.log(newLi);
+   firstLi.replaceWith(newLi)
+
+
+
+//    --> Remove
+
+let target = document.querySelector("li:last-child")
+
+target.remove()
+
+</script>
+</html>

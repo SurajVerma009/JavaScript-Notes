@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning | Chai aur Code</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="navbar">
+                <li class="item-list">Home</li>
+                <li class="item-list">About</li>
+                <li class="item-list">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="title">Welcome to my Website</h1>
+
+        <h2>Food Delivery</h2>
+        <h2>Clothes Delivery</h2>
+        <h2>Shoes Delivery</h2>
+
+        <input type="password" name="password" id="Mypassword">
+
+        <ul id="listCollection">
+            <li class="order-number">One</li>
+            <li class="order-number">Two</li>
+            <li class="order-number">Three</li>
+            <li class="order-number">Four</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p class="footer">
+            All Copyright &copy; claim are Reserved
+        </p>
+    </footer>
+</body>
+<script>
+
+    let navSection = document.querySelector("#navbar")
+
+    console.log(navSection);
+
+    navSection.style.backgroundColor = "blue"
+    navSection.style.color = "White"
+
+    let navChild = navSection.querySelectorAll("li.item-list")
+
+    console.log(navChild);
+
+    navChild.forEach(function (l) {
+        l.style.display = "inline-block"
+        l.style.padding = "10px"
+    })
+
+    document.querySelector("input[type ='password']").style.border = "2px solid black"
+
+    let myAnotherUl = document.querySelector("ul#listCollection")
+
+    console.log(myAnotherUl);
+
+    let changeLi = myAnotherUl.querySelectorAll("li.order-number")
+
+    console.log(changeLi);
+
+    changeLi.forEach(function (li) {
+        li.innerHTML = "Hello"
+    })
+
+    let footerSection = document.getElementsByClassName("footer")[0]
+
+    footerSection.style.backgroundColor = "blue"
+    footerSection.style.color = "white"
+    footerSection.style.padding = "10px"
+
+      
+    //   .querySelectorAll() always returns a Nodelist  --> forEach() applicable
+    
+    // If you want to convert HTML Collection and NodeList in Array then use Array.from() method
+
+</script>
+
+</html>
