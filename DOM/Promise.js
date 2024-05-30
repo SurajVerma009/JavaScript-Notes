@@ -93,3 +93,6 @@ promiseFourDuplicate.then(function (user) {
     console.log("The promise is either resolved or reject");
     //==> The promise is either resolved or reject
 })
+
+
+// resolve aur reject function ko collectively "settelment function" or "resolver function" bola jata h .Ye function promise ko fulfill or reject krne ke liye use hota h .
