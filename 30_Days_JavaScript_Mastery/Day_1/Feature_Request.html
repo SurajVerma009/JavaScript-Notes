@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request</h1>
+        <span>Go to the Browser Console.</span>
+    </main>
+</body>
+<script>
+
+    // Feature Request : 
+
+    // 1. Variable Types Console Log : Write a script that declares variables of different data types and logs both the value and type of each variable to the console.
+
+    let myNum = 101
+
+    let myStr = "Hello"
+
+    let myBool = false
+
+    let bigInt = BigInt(12121211n)
+
+    let undifnd;
+
+    let nullValue = null
+
+    let sym = Symbol("MySym")
+
+    let myObj = {
+        name: "Suraj",
+        rollNo: 101
+    }
+
+    let myArr = [1, 2, "GoodDay", true]
+
+    let fun = function greeting() {
+        console.log("Good Morning !");
+    }
+
+    console.table([myNum, typeof myNum])
+    console.table([myStr, typeof myStr])
+    console.table([myBool, typeof myBool])
+    console.table([bigInt, typeof bigInt])
+    console.table([undifnd, typeof undifnd])
+    console.table([nullValue, typeof nullValue])
+    console.table([sym, typeof sym])
+    console.table([myObj, typeof myObj])
+    console.table([myArr, typeof myArr])
+    console.table([fun, typeof fun])
+
+</script>
+
+<script>
+
+    // 2.Reassignment Demo : Create a script that demonstrates the difference in behavior between let and const when it comes to reassignment.
+
+    let initValue = "Hello"
+
+    initValue = "How are you"
+
+    console.log(initValue);    // --> How are you
+
+    const firstValue = 101
+
+    firstValue = 102
+
+    console.log(firstValue);     // --> TypeError: Assignment to constant variable.
+</script>
+
+</html>
