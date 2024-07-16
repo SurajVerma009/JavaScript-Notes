@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request Script</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request</h1>
+        <span>Go to the browser console.</span>
+    </main>
+</body>
+
+<script>
+
+    // 1 Number Check Script : 
+
+    // Write a script that checks if a number is positive , nagative , or zero using if-else statements and log the result.
+
+    let a = "2"
+    if (a > 0) {
+        console.log(a + " is a positive number");     // --> 2 is a positive number
+    }
+    else if (a < 0) {
+        console.log(a + " is a negative number");
+    }
+    else if (a == 0) {
+        console.log("This is zero");
+    }
+    else {
+        console.log(a + " not a number");
+    }
+</script>
+
+<script>
+
+    // 2 Voting Eligibility Script : 
+
+    // Create a script to check if a person is eligible to vote based on their age and log the result.
+
+    const person = 17
+
+    const eligibleAge = 18
+
+    if (person >= eligibleAge) {
+        console.log("You can vote");
+    } else {
+        console.log("You can not vote");
+    }
+</script>
+
+<script>
+
+    // 3 Day of the Week Script :
+
+    // Write a script that uses a switch case to determine the day of the week based on a number (1-7) and logs the day name.
+
+    let dayNumber = 6
+
+    switch (dayNumber) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+        default:
+            console.log("Incorrect day number");
+    }
+</script>
+
+<script>
+
+    // 4 Grade Assignment Script : 
+
+    // Create a script that uses a switch case to assign a grade based on a score and logs the grade.
+
+    let mathScore = 63;
+    let physicsScore = 72;
+    let chemistryScore = 60;
+    let englishScore = 73;
+    let sanskritScore = 65;
+
+    let totalScore = mathScore + physicsScore + chemistryScore + englishScore + sanskritScore;
+    let maxScore = 500;
+    let result = (totalScore * 100) / maxScore;
+    let grade;
+
+    switch (true) {
+        case (result < 50):
+            grade = 'F';
+            break;
+        case (result >= 50 && result < 60):
+            grade = 'D';
+            break;
+        case (result >= 60 && result < 70):
+            grade = 'C';
+            break;
+        case (result >= 70 && result < 80):
+            grade = 'B';
+            break;
+        case (result >= 80):
+            grade = 'A';
+            break;
+        default:
+            grade = 'Invalid score';
+    }
+
+    console.log(`result = ${result} and your grade is ${grade}`);
+
+
+</script>
+
+<script>
+
+    // 5 Leap Year Check Script : 
+
+    // Write a script that checks if a year is a leap year using multiple conditions and logs the result.
+
+    let year = 1900;
+
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(`${year} is a leap year`);
+    } else {
+        console.log(`${year} is not a leap year`);
+    }
+</script>
+
+</html>
