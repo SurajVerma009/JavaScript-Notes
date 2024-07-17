@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request Script</title>
+</head>
+
+<body>
+    <h1>Feature Request</h1>
+    <span>Go to the browser console.</span>
+</body>
+
+<script>
+
+    // 1 Number Printing Script : 
+
+    // Write a script that prints numbersfrom 1 to 10 using a for loop and a while loop.
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
+
+    // While loop
+
+    let number = 1
+
+    while (number <= 10) {
+        console.log(number);
+        number++;
+    }
+
+</script>
+
+<script>
+
+    // 2 Multiplication Table Script : 
+
+    // Create a script that prints the multiplication table of 5 using a for loop.
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(`5 * ${i} = ${5 * i}`);
+    }
+
+</script>
+
+<script>
+
+    // 3 Pattern Printing Script : 
+
+    // Write a script that prints a pattern of stars using nested loops.
+
+    for (let i = 1; i <= 5; i++) {
+        let line = "";
+        for (let j = 1; j <= i; j++) {
+            line += "* ";
+        }
+        console.log(line);
+    }
+
+</script>
+
+<script>
+
+    // 4 Sum Calculation Script : 
+
+    // Write a script that calculates the sum of numbers from 1 to 10 using a while loop.
+
+    let i = 0;
+    let sum = 0;
+
+    while (i <= 10) {
+        sum = sum + i
+        i++;
+    }
+
+    console.log(sum);
+
+</script>
+
+<script>
+
+    // 5 Factorial Calculation Script : 
+
+    // Create a script that calculates the factorial of a number using a do...while loop.
+
+    let factoNumber = 5;
+
+    let factorial = 1
+
+    let count = 1
+
+    do {
+        factorial = factorial * count
+        count++;
+    } while (count <= factoNumber);
+
+    console.log(`Factorial of ${factoNumber} is ${factorial}`);
+    
+</script>
+
+</html>
