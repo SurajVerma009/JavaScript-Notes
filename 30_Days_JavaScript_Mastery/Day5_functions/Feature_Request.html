@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request Script</h1>
+        <span>Go to the browser console.</span>
+    </main>
+</body>
+
+<script>
+
+    // 1 Even or Odd Function Script :
+
+    // Write a script that includes a function to check if a number is even or odd and logs the result.
+
+    function evenOdd(number) {
+        if (number % 2 == 0) {
+            console.log(`${number} is Even`);
+        } else {
+            console.log(`${number} is Odd`);
+        }
+    }
+
+    evenOdd(8);
+
+</script>
+
+<script>
+
+    // 2 Square Calculation Function Script : 
+
+    // Create a script that includes a function to calculate the square of a number and returns the result.
+
+    function square(number) {
+        let result = Math.pow(number, 2)
+        console.log(`Square of ${number} is ${result}`);
+    }
+
+    square(7);
+
+</script>
+
+<script>
+
+    // 3 Concatenation Function Script : 
+
+    // Write a script that includes a function expression to concatenate two strings and returns the result.
+
+    function concatenateStr(str1, str2) {
+        let concateResult = str1.concat(str2)
+        console.log(concateResult);
+    }
+
+    concatenateStr("Good", " Evening")
+
+</script>
+
+<script>
+
+    // 4 Sum Calculation Arrow Function Script : 
+
+    // Create a script that includes an arrow function to calculate the sum of two numbers and returns the result.
+
+    const sum = (a, b) => {
+        let result = a + b
+        console.log(result);
+    }
+
+    sum(2, 4)
+
+</script>
+
+<script>
+
+    // 5 Higher-Order Function Script : 
+
+    // Write a script that includes a higher-order function to apply a given function multiple times.
+
+    function highOrder(fn, num) {
+        for (let i = 1; i <= num; i++) {
+            fn();
+        }
+    }
+
+    function sayName() {
+        console.log("Suraj Seth");
+    }
+
+    highOrder(sayName, 3)
+
+</script>
+
+</html>
