@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request</h1>
+        <span>Go to the browser console.</span>
+    </main>
+</body>
+
+<script>
+
+    // 1 Array Manupulation Script : 
+
+    // Write a script that demonstrates the creation of an array,adding and remove elements using push,pop,shift and unshift methods.
+
+    let array1 = [0, 2, 3, 5]
+
+    array1.push(9)
+
+    console.log(array1);
+
+
+    array1.pop()
+
+    console.log(array1);
+
+
+    let array2 = [0, 1, 2, 3, 4, 5, 5]
+
+    array2.shift()
+
+    console.log(array2);
+
+
+    array2.unshift(11)
+
+    console.log(array2);
+
+</script>
+
+<script>
+
+    // 2 Array Transformation Script : 
+
+    // Create a script that uses map,filter and reduce methods to transform and aggregate array data.
+
+    let array3 = [1, 2, 3, 4, 5, 6]
+
+    let resultOfArray3 = array3.map((num) => num * 2)
+
+
+    let array4 = [1, 2, 3, 4, 5, 6]
+
+    let resultOfArray4 = array4.filter((num) => num % 2 == 0)
+
+    console.log(resultOfArray4);
+
+
+    let array5 = [1, 2, 3, 4, 5]
+    let initialValue = 0;
+
+    let resultOfArray5 = array5.reduce((accumaltor, arr) => {
+        return accumaltor + arr
+    }, 0)
+
+    console.log(resultOfArray5);
+
+</script>
+
+<script>
+
+    // 3 Array Iteration Script : 
+
+    // Write a script that iterates over an array using both for loop and forEach method and logs each element.
+
+    let anotherArray = [11, 22, 33, 44, 55]
+
+    for (let i = 0; i < anotherArray.length; i++) {
+        console.log(anotherArray[i]);
+    }
+
+
+    let anotherArray2 = [1, 2, 3, 4, 5, 6]
+
+    anotherArray2.forEach((item) => console.log(item))
+
+</script>
+
+<script>
+
+    // 4 Two-dimensional Array Script : 
+
+    // Create a script that demonstrates the creation and manipulation of a two-dimensional array.
+
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ];
+
+
+    console.log(matrix);
+
+
+    let matrix2 = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ];
+
+    console.log(matrix2[0][1]);
+</script>
+
+</html>
