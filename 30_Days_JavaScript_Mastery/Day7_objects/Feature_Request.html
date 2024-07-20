@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request</h1>
+        <span>Go to the browser console.</span>
+    </main>
+</body>
+
+<script>
+
+    // 1 Book Object Script : 
+
+    // Write a script that creates a book object, adds methods to it, and logs its properties and methods result.
+
+    let Book2 = {
+        title: "English",
+        author: "Suraj Seth",
+        printme: function () {
+            console.log(`The title of this book is ${this.title} and author is ${this.author}`);
+        }
+    }
+
+    Book2.printme()
+
+</script>
+
+<script>
+
+    // 2 Library Object Script : 
+
+    // Create a script that defines a library object containing an array of book object and logs the librarys details.
+
+    const library = {
+        name: "City Library",
+        books: [
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                yearPublished: 1960
+            },
+            {
+                title: "1984",
+                author: "George Orwell",
+                yearPublished: 1949
+            },
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                yearPublished: 1925
+            }
+        ]
+    };
+
+    console.log(library);
+
+</script>
+
+<script>
+
+    // 3 Object Iteration Script : 
+
+    // Write a script that demonstrates iterating over an objects properties using for...in loop and Object.keys/Object.values.
+
+    let anotherBook = {
+        title: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        yearPublished: 1960
+    }
+
+    for (const key in anotherBook) {
+        console.log(`${key} : ${anotherBook[key]}`);
+    }
+
+
+    let anotherBook2 = {
+        title: "1984",
+        author: "George Orwell",
+        yearPublished: 1949
+    }
+
+    console.log(`Keys : ${Object.keys(anotherBook2)}`);
+
+    console.log(`Values : ${Object.values(anotherBook2)}`);
+</script>
+
+</html>
