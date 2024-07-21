@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Request</title>
+</head>
+
+<body>
+    <main>
+        <h1>Feature Request</h1>
+        <span>Go to the browser console.</span>
+    </main>
+</body>
+
+<script>
+
+    // 1 Template Literals Script : 
+
+    // Write a script that demonstrates the use of template literals to create and log string with embedded variables and multi-line strings.
+
+    let Name = "Suraj Verma"
+
+    let age = 23
+
+    console.log(`My Name is ${Name} and my age is ${age}`);
+
+</script>
+
+<script>
+
+    // 2 Destructuring Script : 
+
+    // Create a script that uses array and object destructuring to extract values and log them.
+
+    const numbers = [10, 20, 30, 40]
+
+    const [first, second] = numbers
+
+    console.log(first);
+
+    console.log(second);
+
+
+    let books = {
+        title: "1984",
+        author: "George Orwell"
+    }
+
+    const { title, author } = books
+
+    console.log(title);
+    console.log(author);
+
+</script>
+
+<script>
+
+    // 3 Spread and Rest Opearator Script :
+
+    // Write script that demonstrates the use of the spread opearator to combine arrays and the rest operator to handle multiple function arguments.
+
+    let firstArr = [1, 2, 3, 4, 5]
+
+    let resultArr = [...firstArr, 6, 7, 8, 9]
+
+    console.log(resultArr);
+
+
+    let result = 0
+
+    function sum(...numbers) {
+        for (let i = 0; i < numbers.length; i++) {
+            result = result + numbers[i]
+        }
+        console.log(result);
+    }
+
+    sum(1, 2, 3)
+</script>
+
+<script>
+
+    // 4 Default Parameters Script : 
+
+    // Create a script that defines a function with default parameters and logs the result of calling it with different arguments.
+
+    function some(num1, num2 = 1) {
+        console.log(num1 * num2);
+    }
+
+    some(5)
+    some(3, 4)
+
+</script>
+
+<script>
+
+    // 5 Enhanced Object Literals Script : 
+
+    // Write a script that uses enhanced object literals to create and log an object with methods and computed property names.
+
+    const name = "Alice";
+    const Age = 30;
+
+    function greet() {
+        return `Hello, my name is ${this.name} and I am ${this.Age} years old.`;
+    }
+
+    const person = {
+        name,
+        Age,
+        greet
+    };
+
+    console.log(person);
+    console.log(person.greet());
+
+
+    const propName = "dynamicKey";
+
+    const obj = {
+        [propName]: "This is a dynamic value"
+    };
+
+    console.log(obj); 
+    
+</script>
+
+</html>
