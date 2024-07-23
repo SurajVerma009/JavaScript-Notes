@@ -1,0 +1,59 @@
+<!-- Activity 4 : Modifying Attributes and Classes. -->
+
+<!-- Task 7 : Select an HTML element and change one of its attributes (e.g.,src of an img tag). -->
+
+<!-- Task 8 : Add and remove a CSS class to/from an HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+            border: 2px solid black;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="photographer-5149664_640.jpg" alt="photographer">
+
+    <p>This is my first paragraph.</p>
+
+    <button onclick="addClass()">Add CSS</button>
+    <button onclick="removeClass()">Remove CSS</button>
+
+</body>
+
+<script>
+    // Task 7 Solution : 
+
+    let selectElement = document.querySelector("img")
+
+    selectElement.setAttribute("src", "https://images.pexels.com/photos/7892342/pexels-photo-7892342.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")
+
+</script>
+
+<script>
+    // Task 8 Solution : 
+
+    let selectP = document.querySelector("p")
+
+    function addClass() {
+        selectP.classList.add("highlight")
+    }
+
+    function removeClass() {
+        selectP.classList.remove("highlight")
+    }
+
+</script>
+
+</html>

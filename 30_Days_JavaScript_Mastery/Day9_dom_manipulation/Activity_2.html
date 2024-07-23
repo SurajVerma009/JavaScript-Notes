@@ -1,0 +1,49 @@
+<!-- Activity 2 : Creating and Appending Elements -->
+
+<!-- Task 3 : Create a new div element with some text content and append it to the body. -->
+
+<!-- Task 4 : Create a new li element and add it to an existing ul list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <ul></ul>
+</body>
+
+<script>
+    // Task 3 Solution : 
+
+    let selectBody = document.querySelector("body")
+
+    let newDiv = document.createElement("div")
+
+    let text = document.createTextNode("This is my new Div element")
+
+    newDiv.appendChild(text)
+
+    selectBody.appendChild(newDiv)
+
+</script>
+
+<script>
+    // Task 4 Solution : 
+
+    let selectUl = document.querySelector("ul")
+
+    let newLi = document.createElement("li")
+
+    let someText = document.createTextNode("New Li")
+
+    newLi.appendChild(someText)
+
+    selectUl.appendChild(newLi)
+    
+</script>
+</html>

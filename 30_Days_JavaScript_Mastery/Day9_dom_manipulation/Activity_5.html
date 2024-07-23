@@ -1,0 +1,52 @@
+<!-- Activity 5 : Event Handling -->
+
+<!-- Task 9 : Add a click event listner to a button that changes the text content of a paragraph. -->
+
+<!-- Task 10 : Add a mouseover event listner to an element that changes its border color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <style>
+        #text{
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text">Hello Coder!</p>
+
+    <button>Change Text</button>
+</body>
+
+<script>
+
+    // Task 9 Solution :
+
+    let paragraph = document.getElementById("text")
+
+    let buttons = document.querySelector("button")
+
+    buttons.addEventListener("click", () => {
+        paragraph.innerHTML = "Hello Viewer"
+    })
+
+</script>
+
+<script>
+
+    // Task 10 Solution : 
+
+    paragraph.addEventListener("mouseover",()=>{
+        paragraph.style.borderColor = 'red';
+    })
+
+</script>
+
+</html>

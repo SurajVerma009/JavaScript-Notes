@@ -1,0 +1,43 @@
+<!-- Activity 3 : Removing Elements -->
+
+<!-- Task 5 : Select an HTML elements and remove it from the DOM. -->
+
+<!-- Task 6 : Remove the last child of a specific HTML elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <h1>Kaise Hai Aap Log ? </h1>
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+    </ul>
+</body>
+<script>
+    // Task 5 Solution : 
+
+    let select = document.querySelector("h1")
+
+    select.remove()
+
+</script>
+
+<script>
+    // Task 6 Solution : 
+
+    let selectLi = document.querySelector("li:last-child")
+
+    selectLi.remove()
+    
+</script>
+
+</html>
