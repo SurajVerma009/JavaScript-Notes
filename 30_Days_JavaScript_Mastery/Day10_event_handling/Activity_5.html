@@ -1,0 +1,60 @@
+<!-- Activity 5 : Event Delegation -->
+
+<!-- Task 9 : Add a click event listener to a list that logs the text content of the clicked list item using event delegation. -->
+
+<!-- Task 10 : Add a event listener to a parent element that listen for events from dynamically added child elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+
+    <div id="parent">
+        <!-- Dynamic children will be added here -->
+    </div>
+</body>
+
+<script>
+    // Task 9 Solution : 
+
+    let selectUL = document.getElementById("myList")
+
+    selectUL.addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+            console.log(event.target.textContent);
+        }
+    })
+</script>
+
+<script>
+    // Task 10 Solution : 
+    const parent = document.getElementById('parent');
+
+    // Add event listener for click events
+    parent.addEventListener('click', function (event) {
+        // Check if the event target matches a .child element
+        if (event.target.classList.contains('child')) {
+            // Your code to handle the event here
+            console.log('Clicked on a .child element');
+        }
+    });
+
+    const newChild = document.createElement('div');
+    newChild.classList.add('child');
+    newChild.textContent = 'Dynamic Child';
+    parent.appendChild(newChild);
+
+</script>
+
+</html>

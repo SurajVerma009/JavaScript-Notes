@@ -1,0 +1,78 @@
+<!-- Form Events -->
+
+<!-- Task 7 : Add a submit event listener to a form that that prevents the default submission and logs the form data to the console. -->
+
+<!-- Task 8 : Add a change event listener to a select dropdown that displays the selected value in a paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+
+<body>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" id="fname">
+
+        <br>
+        <br>
+
+        <label for="lname">Last Name : </label>
+        <input type="text" id="lname">
+
+        <br>
+        <br>
+
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <br>
+    <br>
+
+    <select id="mySelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <p id="selectedValue">Selected Value: </p>
+</body>
+
+<script>
+    // Task 7 Solution : 
+
+    let fname = document.getElementById("fname")
+
+    let lname = document.getElementById("lname")
+
+    let submit = document.querySelector("#submit")
+
+    submit.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        console.log("First Name : ", fname.value);
+        console.log("Last Name : ", lname.value);
+    })
+</script>
+
+<script>
+    // Task 8 Solution : 
+
+    const selectDropdown = document.getElementById('mySelect');
+    const selectedValueParagraph = document.getElementById('selectedValue');
+
+
+    selectDropdown.addEventListener('change', function () {
+
+        const selectedOption = selectDropdown.options[selectDropdown.selectedIndex].text;
+
+
+        selectedValueParagraph.textContent = 'Selected Value: ' + selectedOption;
+    });
+</script>
+
+</html>

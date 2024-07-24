@@ -1,0 +1,49 @@
+<!-- Activity 2 : Mouse Events -->
+
+<!-- Task 3 : Add a mouseover event listener  to an element that changes its background color.-->
+
+<!-- Task 4 : Add a mouseout event listener to an element that reset its background color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: yellow;
+            text-align: center;
+            padding-top: 90px;
+            box-sizing: border-box;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">Box</div>
+</body>
+ 
+<script>
+    // Task 3 Solution : 
+
+    let box = document.getElementById("box")
+
+    box.addEventListener("mouseover",()=>{
+        box.style.backgroundColor = "red"
+    })
+
+
+    // Task 4 Solution : 
+
+    box.addEventListener("mouseout",()=>{
+        box.style.backgroundColor = "Pink"
+    })
+</script>
+</html>

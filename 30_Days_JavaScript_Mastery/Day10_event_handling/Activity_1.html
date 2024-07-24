@@ -1,0 +1,62 @@
+<!-- Activity 1 : Basic Event Handling -->
+
+<!-- Task 1 : Add a click event listener to a button that changes the text content of a paragraph. -->
+
+<!-- Task 2 : Add a double-click event listener to an image that toggles its visibility. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        #toggleImage {
+            width: 300px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text">I love You.</p>
+
+    <button id="changeText">Change Text</button>
+
+    <div>
+        <img id="toggleImage"
+            src="https://images.pexels.com/photos/7663981/pexels-photo-7663981.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="flower">
+    </div>
+</body>
+
+<script>
+    // Task 1 Solution : 
+
+    let selectText = document.getElementById("text")
+
+    let button = document.getElementById("changeText")
+
+    button.addEventListener("click", () => {
+        selectText.innerHTML = "I Love You Too."
+    })
+
+</script>
+
+<script>
+    // Task 2 Solution : 
+
+    const image = document.getElementById('toggleImage');
+
+    image.addEventListener('dblclick', function () {
+        if (image.style.display === 'none') {
+            image.style.display = 'block'; // Show the image
+        } else {
+            image.style.display = 'none'; // Hide the image
+        }
+    });
+</script>
+
+</html>
